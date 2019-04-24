@@ -1,0 +1,88 @@
+﻿@model SprinklerNetCore.Models.Settings
+@using  SprinklerNetCore.Resources
+
+<h4>@ViewData["Title"]</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TimeZoneInfoId" class="control-label"></label>
+                <select asp-for="TimeZoneInfoId" class="form-control" asp-items="ViewBag.timeZone"></select>
+                <span asp-validation-for="TimeZoneInfoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApiKey" class="control-label"></label>
+                <input asp-for="ApiKey" class="form-control" />
+                <span asp-validation-for="ApiKey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Latitude" class="control-label"></label>
+                <input name="Latitude" value="@Html.DisplayFor(x => x.Latitude)" type="text" class="form-control" />
+                <span asp-validation-for="Latitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Longitude" class="control-label"></label>
+                <input name="Longitude" value="@Html.DisplayFor(x => x.Longitude)" type="text" class="form-control" />
+                <span asp-validation-for="Longitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit" class="control-label"></label>
+                <input asp-for="Unit" class="form-control" />
+                <span asp-validation-for="Unit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Language" class="control-label"></label>
+                <select asp-for="Language" class="form-control" asp-items="ViewBag.langauges"></select>
+                <span asp-validation-for="Language" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TimeToCheck" class="control-label"></label>
+                <input asp-for="TimeToCheck" class="form-control" />
+                <span asp-validation-for="TimeToCheck" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="FullAutomationMode" /> @Html.DisplayNameFor(model => model.FullAutomationMode)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecipitationThresholdActuals" class="control-label"></label>
+                <input asp-for="PrecipitationThresholdActuals" class="form-control" />
+                <span asp-validation-for="PrecipitationThresholdActuals" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecipitationThresholdForecast" class="control-label"></label>
+                <input asp-for="PrecipitationThresholdForecast" class="form-control" />
+                <span asp-validation-for="PrecipitationThresholdForecast" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecipitationPercentForecast" class="control-label"></label>
+                <input asp-for="PrecipitationPercentForecast" class="form-control" />
+                <span asp-validation-for="PrecipitationPercentForecast" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">@ViewData["IndexBackToList"]</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

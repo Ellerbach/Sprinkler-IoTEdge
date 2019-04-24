@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using  SprinklerNetCore.Resources
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if ((SignInManager.IsSignedIn(User)) && (User.IsInRole("Admin")))
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">@Text.Users</a>
+    </li>
+}

@@ -1,0 +1,32 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using  SprinklerNetCore.Resources
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model SprinklerNetCore.Models.HomeModel
+
+<div class="text-center">
+    <h1 class="display-4">@Text.HomeWelcome</h1>
+</div>
+<h2>@Text.Sprinkler</h2>
+<hr />
+<p>@Html.Raw(String.Format(Text.HomeDateTime, Model.DateTime))</p>
+@if ((SignInManager.IsSignedIn(User)) && (User.IsInRole("Admin") || User.IsInRole("User")))
+{
+    <partial name="_sprinkler" model="Model.Sprinklers" />
+    <h2>@Text.Forecast</h2>
+
+    if (Model.NeedToSrpinkle != null)
+    {
+        <partial name="_forecast" model="Model.NeedToSrpinkle" />
+    }
+    else
+    {
+        <p>@Text.ForecastNoneAvailable</p>
+    }
+
+}
+else
+{
+    @Html.Raw(@Text.HomeInformation)
+}
+

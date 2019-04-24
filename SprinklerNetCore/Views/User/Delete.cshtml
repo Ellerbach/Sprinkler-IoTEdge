@@ -1,0 +1,23 @@
+﻿@model string
+@using  SprinklerNetCore.Resources
+
+<h4>@ViewData["Title"]</h4>
+
+<h3>@ViewData["DeleteConfirmation"]</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Email
+        </dt>
+        <dd class="col-sm-10">
+            @Model
+        </dd>
+    </dl>
+
+    <form action="" method="post">
+
+        <input type="submit" value="@ViewData["Delete"]" class="btn btn-danger" /> |
+        <a asp-action="Index">@ViewData["IndexBacktoList"]</a>
+    </form>
+</div>

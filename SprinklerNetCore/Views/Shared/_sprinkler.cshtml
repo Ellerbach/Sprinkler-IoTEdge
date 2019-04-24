@@ -1,0 +1,51 @@
+﻿@model IEnumerable<SprinklerNetCore.Models.Sprinkler>
+@using  SprinklerNetCore.Resources
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsInverted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Open)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsInverted)
+                </td>
+                <td>
+                    @Html.ActionLink(item.Open ? ViewData["IsOpen"].ToString() : ViewData["IsClosed"].ToString(), "Open", "Sprinkler", new { id = item.Number, state = !item.Open })
+                </td>
+                <td>
+                    @Html.ActionLink(Text.CreateTypical, "Typical", "Sprinkler", new { id = item.Number })
+                    <br />
+                    @Html.ActionLink(Text.ListAllPrograms, "Index", "Program", new { sprinkler = item.Number })
+                    <br />
+                    @Html.ActionLink(Text.Edit, "Edit", "Sprinkler", new { id = item.Number }) |
+                    @Html.ActionLink(Text.Details, "Details", "Sprinkler", new { id = item.Number }) |
+                    @Html.ActionLink(Text.Delete, "Delete", "Sprinkler", new { id = item.Number }) |
+                    @Html.ActionLink(Text.EditTypical, "EditTypical", "Program", new { id = item.Number })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

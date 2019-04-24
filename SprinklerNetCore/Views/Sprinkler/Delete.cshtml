@@ -1,0 +1,41 @@
+﻿@model SprinklerNetCore.Models.Sprinkler
+@using  SprinklerNetCore.Resources
+
+<h4>@ViewData["Title"]</h4>
+
+<h3>@Text.DeleteConfirmation</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsInverted)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsInverted)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Open)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Open)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input id="id" value="@Model.Number" hidden />
+        <input type="submit" value="@Text.Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">@Text.IndexBackToList</a>
+    </form>
+</div>

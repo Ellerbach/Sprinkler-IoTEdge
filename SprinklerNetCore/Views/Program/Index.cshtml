@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SprinklerNetCore.Models.SprinklerProgram>
+@using  SprinklerNetCore.Resources
+
+<h4>@ViewData["Title"]</h4>
+
+<p>
+    <a asp-action="Create">@Text.Create</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTimeStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Number)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.DateTimeStart.ToString("yyyy/MM/dd HH:mm")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duration)
+                </td>
+                <td>
+                    @{
+                        foreach (var spr in ViewBag.Sprinklers)
+                        {
+                            if (spr.Number == item.Number)
+                            {
+                                @spr.Name
+                                break;
+                            }
+                        }
+                    }
+                </td>
+                <td>
+                    @Html.ActionLink(Text.Edit, "Edit", new { id = item.id }) |
+                    @Html.ActionLink(Text.Details, "Details", new { id = item.id }) |
+                    @Html.ActionLink(Text.Delete, "Delete", new { id = item.id }) |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

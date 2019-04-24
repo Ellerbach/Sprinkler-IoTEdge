@@ -1,0 +1,10 @@
+﻿@model IEnumerable<SprinklerNetCore.Models.Sprinkler>
+@using  SprinklerNetCore.Resources
+
+<h4>@ViewData["Title"]</h4>
+
+<p>
+    <a asp-action="Create">@Text.Create</a>
+</p>
+
+<partial name="_sprinkler" model="Model" />

@@ -1,0 +1,48 @@
+﻿@using  SprinklerNetCore.Resources
+@model SprinklerNetCore.Models.FuzzySprinkler
+
+<h4>@ViewData["Title"]</h4>
+@if (ViewData["msg"] != null)
+{
+    <p class="text-danger">@ViewData["msg"]</p>
+}
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TempMin" class="control-label"></label>
+                <input name="TempMin" value="@Html.DisplayFor(m => m.TempMin)" type="text" class="form-control" />
+                <span asp-validation-for="TempMin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TempMax" class="control-label"></label>
+                <input name="TempMax" value="@Html.DisplayFor(m => m.TempMax)" type="text" class="form-control" />
+                <span asp-validation-for="TempMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RainMax" class="control-label"></label>
+                <input name="RainMax" value="@Html.DisplayFor(m => m.RainMax)" type="text" class="form-control" />
+                <span asp-validation-for="RainMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SprinklingMax" class="control-label"></label>
+                <input name="SprinklingMax" value="@Html.DisplayFor(m => m.SprinklingMax)" type="text" class="form-control" />
+                <span asp-validation-for="SprinklingMax" class="text-danger"></span>
+            </div>
+            <input asp-for="id" hidden="hidden" />
+            <div class="form-group">
+                <input type="submit" value="@Text.Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">@Text.IndexBackToList</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

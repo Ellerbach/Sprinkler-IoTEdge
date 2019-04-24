@@ -1,0 +1,50 @@
+﻿@using  SprinklerNetCore.Resources
+@model IEnumerable<SprinklerNetCore.Models.FuzzySprinkler>
+
+<h4>@ViewData["Title"]</h4>
+<p>
+    <a asp-action="Create">@Text.Create</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TempMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RainMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SprinklingMax)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TempMin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TempMax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RainMax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SprinklingMax)
+                </td>
+                <td>
+                    @Html.ActionLink(Text.Edit, "Edit", new { id = item.id }) |
+                    @Html.ActionLink(Text.Details, "Details", new { id = item.id }) |
+                    @Html.ActionLink(Text.Delete, "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,92 @@
+﻿@using  SprinklerNetCore.Resources
+@model SprinklerNetCore.Models.Settings
+
+<h4>@ViewData["Title"]</h4>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.TimeZoneInfoId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TimeZoneInfoId)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.ApiKey)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ApiKey)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Unit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Unit)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Language)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Language)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.TimeToCheck)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TimeToCheck)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.FullAutomationMode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FullAutomationMode)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.PrecipitationThresholdActuals)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PrecipitationThresholdActuals)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.PrecipitationThresholdForecast)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PrecipitationThresholdForecast)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.PrecipitationPercentForecast)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PrecipitationPercentForecast)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink(Text.Edit, "Edit") |
+    @Html.ActionLink(Text.IndexBackToHome, "Index", "Home")
+</div>

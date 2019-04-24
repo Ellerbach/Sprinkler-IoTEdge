@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SprinklerNetCore.Models.UserRoles>
+@using  SprinklerNetCore.Resources
+
+<h4>@ViewData["Title"]</h4>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Roles)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @foreach (var role in item.Roles)
+                    {
+                        @Html.DisplayFor(modelItem => role)
+                    }
+                </td>
+                <td>
+                    @Html.ActionLink(ViewData["Edit"].ToString(), "Edit", new { id = item.Email }) |
+                    @Html.ActionLink(ViewData["Delete"].ToString(), "Delete", new { id = item.Email })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SprinklerNetCore", "SprinklerNetCore\SprinklerNetCore.csproj", "{CEA18677-D839-4ECA-B0BC-473304E9D05B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEA18677-D839-4ECA-B0BC-473304E9D05B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA18677-D839-4ECA-B0BC-473304E9D05B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA18677-D839-4ECA-B0BC-473304E9D05B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA18677-D839-4ECA-B0BC-473304E9D05B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFFE3C2B-B1DE-4F05-AF2D-C8EC15AA7EB5}
+	EndGlobalSection
+EndGlobal

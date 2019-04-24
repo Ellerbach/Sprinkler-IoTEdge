@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApiKey" xml:space="preserve">
+    <value>DarkSky API key</value>
+  </data>
+  <data name="AutomationTitle" xml:space="preserve">
+    <value>Automatisation</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Ville</value>
+  </data>
+  <data name="CloseAfter" xml:space="preserve">
+    <value>Fermer arroseur après</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Créer nouveau</value>
+  </data>
+  <data name="CreateTypical" xml:space="preserve">
+    <value>Créer un programme typique</value>
+  </data>
+  <data name="DateTimeStart" xml:space="preserve">
+    <value>Date et heure de début</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Etes-vous sûr de vouloir supprimer cela?</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Détails</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duréé</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editer</value>
+  </data>
+  <data name="EditTypical" xml:space="preserve">
+    <value>Editer typique</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Forecast" xml:space="preserve">
+    <value>Prévisions météos</value>
+  </data>
+  <data name="ForecastApparentTemp" xml:space="preserve">
+    <value>Temp apparente °C</value>
+  </data>
+  <data name="ForecastHighTemp" xml:space="preserve">
+    <value>Temp haute °C</value>
+  </data>
+  <data name="ForecastIcon" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="ForecastIOSettings" xml:space="preserve">
+    <value>Paramètres pour les prévision et automatisation</value>
+  </data>
+  <data name="ForecastLowTemp" xml:space="preserve">
+    <value>Temp basse °C</value>
+  </data>
+  <data name="ForecastNeedSprinkler" xml:space="preserve">
+    <value>Avons-nous besoin d'arroser?</value>
+  </data>
+  <data name="ForecastNoneAvailable" xml:space="preserve">
+    <value>Aucune donnée de prévision disponible</value>
+  </data>
+  <data name="ForecastPercentageCorrection" xml:space="preserve">
+    <value>Pourcentage de correction</value>
+  </data>
+  <data name="ForecastPrecIntens" xml:space="preserve">
+    <value>Intens prec</value>
+  </data>
+  <data name="ForecastPrecProb" xml:space="preserve">
+    <value>Prob prec %</value>
+  </data>
+  <data name="ForecastPrecType" xml:space="preserve">
+    <value>Type prec</value>
+  </data>
+  <data name="ForecastSummary" xml:space="preserve">
+    <value>Résumé</value>
+  </data>
+  <data name="ForecastTemp" xml:space="preserve">
+    <value>Temp °C</value>
+  </data>
+  <data name="ForecastTime" xml:space="preserve">
+    <value>Heure</value>
+  </data>
+  <data name="ForecastTitle" xml:space="preserve">
+    <value>Prévisions</value>
+  </data>
+  <data name="ForecastWindSpeed" xml:space="preserve">
+    <value>Vitesse vent km/h</value>
+  </data>
+  <data name="FullAutomationMode" xml:space="preserve">
+    <value>Mode totallement automatique de gestion de l'arrosage</value>
+  </data>
+  <data name="FuzzySprinklers" xml:space="preserve">
+    <value>Gamme de température et niveau d'eau pour mode automatique</value>
+  </data>
+  <data name="HistoryNoData" xml:space="preserve">
+    <value>Aucune donnée historique</value>
+  </data>
+  <data name="HistoryTitle" xml:space="preserve">
+    <value>Historique</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="IndexBackToHome" xml:space="preserve">
+    <value>Retour à la page principale</value>
+  </data>
+  <data name="IndexBackToList" xml:space="preserve">
+    <value>Retour à la liste</value>
+  </data>
+  <data name="IsHumid" xml:space="preserve">
+    <value>Est-ce humid?</value>
+  </data>
+  <data name="IsInverted" xml:space="preserve">
+    <value>Entrée inversées?</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Langue des prévisions et de l'interface</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="ListAllPrograms" xml:space="preserve">
+    <value>Liste des programmes</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="MaxSprinklers" xml:space="preserve">
+    <value>Nombre maximum d'arroseurs</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="NeedTo" xml:space="preserve">
+    <value>Avons-nous besoin d'arroser?</value>
+  </data>
+  <data name="NeedToSprinkle" xml:space="preserve">
+    <value>Avons-nous besoin d'arroser?</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Numéro d'arroseur</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Arroseur ouvert</value>
+  </data>
+  <data name="PercentageCorrection" xml:space="preserve">
+    <value>Pourcentage de correction à appliquer</value>
+  </data>
+  <data name="PrecipitationPercentForecast" xml:space="preserve">
+    <value>Seuil de confiance minimum</value>
+  </data>
+  <data name="PrecipitationThresholdActuals" xml:space="preserve">
+    <value>Seuil de précipitations réelles</value>
+  </data>
+  <data name="PrecipitationThresholdForecast" xml:space="preserve">
+    <value>Seuil de prévision de précipitations</value>
+  </data>
+  <data name="ProgramTitle" xml:space="preserve">
+    <value>Programmes</value>
+  </data>
+  <data name="RainMax" xml:space="preserve">
+    <value>Seuil pour quantité d'eau</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Sauver</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="SoilHumidity" xml:space="preserve">
+    <value>Humidity du sol</value>
+  </data>
+  <data name="SprinklerNumber" xml:space="preserve">
+    <value>Numéro d'arroseur</value>
+  </data>
+  <data name="SprinklerPrograms" xml:space="preserve">
+    <value>Programmes</value>
+  </data>
+  <data name="Sprinklers" xml:space="preserve">
+    <value>Arroseurs</value>
+  </data>
+  <data name="SprinklerTitle" xml:space="preserve">
+    <value>Arroseurs</value>
+  </data>
+  <data name="SprinklingMax" xml:space="preserve">
+    <value>Correction en pourcent 100% = 100</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Temps de début</value>
+  </data>
+  <data name="TempMax" xml:space="preserve">
+    <value>Temprérature maximum</value>
+  </data>
+  <data name="TempMin" xml:space="preserve">
+    <value>Température minimum</value>
+  </data>
+  <data name="TimeToCheck" xml:space="preserve">
+    <value>Heure à laquelle le processus automatique détermine s'il faut arroser</value>
+  </data>
+  <data name="TimeZoneInfo" xml:space="preserve">
+    <value>Correction pour les fuseaux horaires</value>
+  </data>
+  <data name="TypicalProgram" xml:space="preserve">
+    <value>Programme typic</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unités pour les prévisions</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>Gestion des utilisateurs</value>
+  </data>
+  <data name="ErrorMustBeNumber" xml:space="preserve">
+    <value>Ce champ doit être un nombre</value>
+  </data>
+  <data name="HomeDateTime" xml:space="preserve">
+    <value>Il est maintenant {0}, si ce n'est pas le cas, changez le fuseau horraire dans les &lt;a href="/Settings"&gt;paramètres&lt;/a&gt;.</value>
+  </data>
+  <data name="HomeInformation" xml:space="preserve">
+    <value>&lt;p&gt;
+        Cet arrosage automatique fonctionne avec &lt;a href="https://docs.microsoft.com/aspnet/core/"&gt;ASP.NET Core&lt;/a&gt;, utilisant nativement &lt;a href="https://github.com/dotnet/iot"&gt;System.Device.Gpio&lt;/a&gt; et tournant dans environement &lt;a href="https://azure.microsoft.com/services/iot-edge/
+"&gt;Azure IoT Edge&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;p&gt;En savoir plus sur le &lt;a href="https://github.com/ellerbach"&gt;GitHub de Laurent Ellerbach&lt;/a&gt;&lt;/p&gt;
+    &lt;br /&gt;
+
+    &lt;h2&gt;Vous devez être un utilisateur approuvé pour pouvoir utiliser et paramétrer l'arrosage automatique.&lt;/h2&gt;</value>
+  </data>
+  <data name="HomePrivacy" xml:space="preserve">
+    <value>Ce site web utilise des cookies et ne stocke pas d'informations personnelles. Ils ne servent qu'à faciliter la navigation sur le site.</value>
+  </data>
+  <data name="HomeTitle" xml:space="preserve">
+    <value>Page principale</value>
+  </data>
+  <data name="HomeWelcome" xml:space="preserve">
+    <value>Bienvenue</value>
+  </data>
+  <data name="IsClosed" xml:space="preserve">
+    <value>Fermé</value>
+  </data>
+  <data name="IsOpen" xml:space="preserve">
+    <value>Ouvert</value>
+  </data>
+  <data name="Sprinkler" xml:space="preserve">
+    <value>Arrosage</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Utilisateurs</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Bonjour</value>
+  </data>
+</root>

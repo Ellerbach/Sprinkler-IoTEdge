@@ -1,0 +1,23 @@
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2-stretch-slim-arm32v7 AS base
+RUN apt-get update && apt-get install libunwind8
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM microsoft/dotnet:2.2-sdk AS build
+WORKDIR /src
+COPY ["SprinklerNetCore/SprinklerNetCore.csproj", "SprinklerNetCore/"]
+RUN dotnet restore "SprinklerNetCore/SprinklerNetCore.csproj"
+COPY . .
+WORKDIR "/src/SprinklerNetCore"
+RUN dotnet build "SprinklerNetCore.csproj" -r linux-arm -c Release -o /app
+# RUN dotnet build "SprinklerNetCore.csproj" -r linux-arm -o /app
+
+FROM build AS publish
+RUN dotnet publish "SprinklerNetCore.csproj" -r linux-arm -c Release -o /app
+# RUN dotnet publish "SprinklerNetCore.csproj" -r linux-arm -o /app
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app .
+ENTRYPOINT ["dotnet", "SprinklerNetCore.dll"]

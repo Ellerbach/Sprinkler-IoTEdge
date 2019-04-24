@@ -1,0 +1,132 @@
+﻿@using  SprinklerNetCore.Resources
+@model SprinklerNetCore.Models.NeedToSrpinkle
+
+<h4>@ViewData["Title"]</h4>
+
+@{
+    if (Model != null)
+    {
+        <partial name="_forecast" model="Model" />
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>@Text.ForecastTime</th>
+                    <th>@Text.ForecastSummary</th>
+                    <th>@Text.ForecastIcon</th>
+                    <th>@Text.ForecastLowTemp</th>
+                    <th>@Text.ForecastHighTemp</th>
+                    <th>@Text.ForecastWindSpeed</th>
+                    <th>@Text.ForecastPrecType</th>
+                    <th>@Text.ForecastPrecProb</th>
+                    <th>@Text.ForecastPrecIntens</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Forecast.Daily.Days)
+                {
+                    <tr>
+                        <td>
+                            @item.Time.ToString("yyyy-MM-dd ddd")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Summary)
+                        </td>
+                        <td>
+                            @{
+                                var strlink = "https://www.ellerbach.net/public/meteo/" + item.Icon + ".png";
+                                <img src="@strlink" />
+                            }
+                        </td>
+                        <td>
+                            @item.LowTemperature.ToString("0.0")
+                        </td>
+                        <td>
+                            @item.HighTemperature.ToString("0.0")
+                        </td>
+                        <td>
+                            @item.WindSpeed.ToString("0.0")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PrecipitationType)
+                        </td>
+                        <td>
+                            @{
+                                var prep = (item.PrecipitationProbability * 100).ToString("0.0");
+                            }
+                            @prep
+                        </td>
+                        <td>
+                            @{
+                                var prepI = (item.PrecipitationIntensity * 24).ToString("0.0");
+                            }
+                            @prepI
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>@Text.ForecastTime</th>
+                    <th>@Text.ForecastSummary</th>
+                    <th>@Text.ForecastIcon</th>
+                    <th>@Text.ForecastTemp</th>
+                    <th>@Text.ForecastApparentTemp</th>
+                    <th>@Text.ForecastWindSpeed</th>
+                    <th>@Text.ForecastPrecType</th>
+                    <th>@Text.ForecastPrecProb</th>
+                    <th>@Text.ForecastPrecIntens</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Forecast.Hourly.Hours)
+                {
+                    <tr>
+                        <td>
+                            @item.Time.ToString("yyyy-MM-dd ddd HH:mm")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Summary)
+                        </td>
+                        <td>
+                            @{
+                                var strlink = "https://www.ellerbach.net/public/meteo/" + item.Icon + ".png";
+                                <img src="@strlink" />
+                            }
+                        </td>
+                        <td>
+                            @item.Temperature.ToString("0.0")
+                        </td>
+                        <td>
+                            @item.ApparentTemperature.ToString("0.0")
+                        </td>
+                        <td>
+                            @item.WindSpeed.ToString("0.0")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PrecipitationType)
+                        </td>
+                        <td>
+                            @{
+                                var prep = (item.PrecipitationProbability * 100).ToString("0.0");
+                            }
+                            @prep
+                        </td>
+                        <td>
+                            @item.PrecipitationIntensity.ToString("0.0")
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>
+            @Text.ForecastNoneAvailable
+        </p>
+    }
+}

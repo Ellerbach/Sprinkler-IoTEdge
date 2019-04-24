@@ -1,0 +1,29 @@
+﻿@model SprinklerNetCore.Models.NeedToSrpinkle
+@using  SprinklerNetCore.Resources
+
+<p>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Text.ForecastNeedSprinkler
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NeedTo)
+        </dd>
+        <dt class="col-sm-3">
+            @Text.ForecastPercentageCorrection
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                var prep = (Model.PercentageCorrection * 100).ToString("0.0");
+            }
+            @prep %
+        </dd>
+    </dl>
+    <hr />
+    @Model.Forecast.Daily.Summary
+    @{
+        var strlink = "https://www.ellerbach.net/public/meteo/" + Model.Forecast.Daily.Icon + ".png";
+        <img src="@strlink" />
+    }
+</p>
